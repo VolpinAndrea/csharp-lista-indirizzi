@@ -1,9 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using ListaIndirizzi;
-using System.Diagnostics;
-using System.IO;
-using System.Xml.Linq;
-using static System.Net.WebRequestMethods;
 
 List<Indirizzo> listaIndirizzi = new List<Indirizzo>();
 //   C:\\Utenti\\Utente\\Desktop\\ExGitVSCode\\ListaIndirizzi\\Indirizzi.txt
@@ -37,7 +33,9 @@ try
 
     while (!sr.EndOfStream)
     {
-        string riga = sr.ReadLine();
+        string riga = ControllaRiga(sr.ReadLine());
+
+
 
 
         string[] informazioniBrano = riga.Split(",");
@@ -69,3 +67,23 @@ foreach (Indirizzo brano in listaIndirizzi)
 {
     Console.WriteLine(brano);
 }
+
+static string ControllaRiga(string riga)
+{
+    int virgole = riga.Count(f => f == ',');
+    if (virgole > 5)
+    {
+        Console.WriteLine("entrtyuacfv");
+        int index = riga.IndexOf(",");
+        string nuova = riga.Replace(riga[index], ' ');
+        Console.WriteLine(nuova);
+        return nuova;
+    }
+    else
+    {
+        return riga;
+    }
+
+
+}
+

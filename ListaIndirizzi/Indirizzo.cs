@@ -18,12 +18,12 @@ namespace ListaIndirizzi
 
         public Indirizzo(string name, string surname, string street, string city, string province, string zip)
         {
-            this.name = name;
-            this.surname = surname;
-            this.street = street;
-            this.city = city;
-            this.province = province;
-            this.zip = zip;
+            SetNome(name);
+            SetCognome(surname);
+            SetStrada(street);
+            SetCittà(city);
+            SetProvincia(province);
+            SetZip(zip);
         }
 
         public string GetName()
@@ -49,6 +49,72 @@ namespace ListaIndirizzi
         public string GetZip()
         {
             return zip;
+        }
+        public void SetNome(string nome)
+        {
+            if(nome == "")
+            {
+                this.name = "Non inserito";
+            }
+            else
+            {
+                this.name = nome;
+            }
+        }
+        public void SetCognome(string cognome)
+        {
+            if (cognome == "")
+            {
+                this.name = "Non inserito";
+            }
+            else
+            {
+                this.surname = cognome;
+            }
+        }
+        public void SetStrada(string strada)
+        {
+            if ( strada == "")
+            {
+                this.street = "Non inserito";
+            }
+            else
+            {
+                this.street = strada;
+            }
+        }
+        public void SetCittà(string citta)
+        {
+            if ( citta == "")
+            {
+                this.city = "Non inserito";
+            }
+            else
+            {
+                this.city = citta;
+            }
+        }
+        public void SetProvincia(string provincia)
+        {
+            if ( provincia == "")
+            {
+                this.province = "Non inserito";
+            }
+            else
+            {
+                this.province = provincia;
+            }
+        }
+        public void SetZip(string zip)
+        {
+            if (zip == "")
+            {
+                this.zip = "Non inserito";
+            }
+            else
+            {
+                this.zip = zip;
+            }
         }
 
 

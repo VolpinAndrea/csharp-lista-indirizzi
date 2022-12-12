@@ -65,9 +65,6 @@ catch (Exception e)
 
 
 
-
-
-
 foreach (Indirizzo brano in listaIndirizzi)
 {
     Console.WriteLine(brano);

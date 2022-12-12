@@ -54,7 +54,7 @@ namespace ListaIndirizzi
 
         public override string ToString()
         {
-            return "Nome: " + this.name + "\tCognome: " + this.surname + "\tVia: " + this.street + "Città: " + this.city + "\tProvincia: " + this.province + "\tZIP: " + this.zip;
+            return "Nome: " + this.name + "\tCognome: " + this.surname + "\nVia: " + this.street + "   Città: " + this.city + "   Provincia: " + this.province + "\nZIP: " + this.zip + "\n--------------------------------------------------";
         }
 
 

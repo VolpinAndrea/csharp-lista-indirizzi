@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using ListaIndirizzi;
+using System.Diagnostics;
 using System.IO;
 using System.Xml.Linq;
 using static System.Net.WebRequestMethods;
@@ -19,10 +20,11 @@ try
     sw.WriteLine("Jack,McGinnis,220 hobo Av.,Phila,PA,09119");
     sw.WriteLine("John Da Man, Repici,120 Jefferson St., Riverside, NJ,08075");
     sw.WriteLine("Stephen, Tyler,7452 Terrace \"At the Plaza\" road, SomeTown, SD,91234");
+    sw.WriteLine("Joan,Anne,Jet,9th at Terrace plc, Desert City,CO,00123");
+    sw.WriteLine(",Blankman,,New York, NY, 100101");
+    sw.WriteLine("Joan,SomeTown, SD, 00298");
 
-
-
-sw.Close();
+    sw.Close();
 }
 catch (Exception e)
 {
